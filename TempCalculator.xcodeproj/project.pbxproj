@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4E40AFB624F4C8C30035826A /* 						.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "\t\t\t\t\t\t.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E40AFB624F4C8C30035826A /* 						.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "\t\t\t\t\t\t.app"; path = "/Users/mau5atron/Desktop/objective_c_bootcamp/008_calculation_applications/TempCalculator/build/Debug-iphoneos/\t\t\t\t\t\t.app"; sourceTree = "<absolute>"; };
 		4E40AFB924F4C8C30035826A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4E40AFBA24F4C8C30035826A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4E40AFBC24F4C8C30035826A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -43,16 +43,8 @@
 			isa = PBXGroup;
 			children = (
 				4E40AFB824F4C8C30035826A /* TempCalculator */,
-				4E40AFB724F4C8C30035826A /* Products */,
+				4EBFEFD824F6026D0043DF7A /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		4E40AFB724F4C8C30035826A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4E40AFB624F4C8C30035826A /* 						.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		4E40AFB824F4C8C30035826A /* TempCalculator */ = {
@@ -69,6 +61,13 @@
 				4E40AFC824F4C8C30035826A /* main.m */,
 			);
 			path = TempCalculator;
+			sourceTree = "<group>";
+		};
+		4EBFEFD824F6026D0043DF7A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,6 +102,11 @@
 					4E40AFB524F4C8C30035826A = {
 						CreatedOnToolsVersion = 10.1;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.GameCenter.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -115,7 +119,7 @@
 				Base,
 			);
 			mainGroup = 4E40AFAD24F4C8C30035826A;
-			productRefGroup = 4E40AFB724F4C8C30035826A /* Products */;
+			productRefGroup = 4E40AFAD24F4C8C30035826A;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -291,10 +295,10 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TempCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mau5atron.TempCalc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mau5atron.TempConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,10 +311,10 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TempCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mau5atron.TempCalc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mau5atron.TempConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

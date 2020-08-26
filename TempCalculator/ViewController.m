@@ -20,4 +20,8 @@
 }
 
 
+- (IBAction)segControlTempConversion:(id)sender {
+	self.temperatureLabelOutlet.text = self.conversionTextFieldOutlet.text;
+}
+
 @end
