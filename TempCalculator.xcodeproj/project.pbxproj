@@ -16,7 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4E40AFB624F4C8C30035826A /* 						.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "\t\t\t\t\t\t.app"; path = "/Users/mau5atron/Desktop/objective_c_bootcamp/008_calculation_applications/TempCalculator/build/Debug-iphoneos/\t\t\t\t\t\t.app"; sourceTree = "<absolute>"; };
 		4E40AFB924F4C8C30035826A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4E40AFBA24F4C8C30035826A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4E40AFBC24F4C8C30035826A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -26,6 +25,7 @@
 		4E40AFC524F4C8C30035826A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E40AFC724F4C8C30035826A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E40AFC824F4C8C30035826A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4ED4CDBB24F6F812007FBCC5 /* TempCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TempCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +42,7 @@
 		4E40AFAD24F4C8C30035826A = {
 			isa = PBXGroup;
 			children = (
+				4ED4CDBB24F6F812007FBCC5 /* TempCalculator.app */,
 				4E40AFB824F4C8C30035826A /* TempCalculator */,
 				4EBFEFD824F6026D0043DF7A /* Frameworks */,
 			);
@@ -73,9 +74,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4E40AFB524F4C8C30035826A /* 						 */ = {
+		4E40AFB524F4C8C30035826A /* TempCalculator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E40AFCC24F4C8C30035826A /* Build configuration list for PBXNativeTarget "						" */;
+			buildConfigurationList = 4E40AFCC24F4C8C30035826A /* Build configuration list for PBXNativeTarget "TempCalculator" */;
 			buildPhases = (
 				4E40AFB224F4C8C30035826A /* Sources */,
 				4E40AFB324F4C8C30035826A /* Frameworks */,
@@ -85,9 +86,9 @@
 			);
 			dependencies = (
 			);
-			name = "\t\t\t\t\t\t";
+			name = TempCalculator;
 			productName = TempCalculator;
-			productReference = 4E40AFB624F4C8C30035826A /* 						.app */;
+			productReference = 4ED4CDBB24F6F812007FBCC5 /* TempCalculator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -123,7 +124,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4E40AFB524F4C8C30035826A /* 						 */,
+				4E40AFB524F4C8C30035826A /* TempCalculator */,
 			);
 		};
 /* End PBXProject section */
@@ -295,7 +296,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TempCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mau5atron.TempConverter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mau5atron.TempCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -311,7 +312,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TempCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mau5atron.TempConverter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mau5atron.TempCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -330,7 +331,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E40AFCC24F4C8C30035826A /* Build configuration list for PBXNativeTarget "						" */ = {
+		4E40AFCC24F4C8C30035826A /* Build configuration list for PBXNativeTarget "TempCalculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E40AFCD24F4C8C30035826A /* Debug */,

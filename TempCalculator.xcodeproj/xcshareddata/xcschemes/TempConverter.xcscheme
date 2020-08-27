@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4E40AFB524F4C8C30035826A"
-               BuildableName = "&#9;&#9;&#9;&#9;&#9;&#9;.app"
-               BlueprintName = "&#9;&#9;&#9;&#9;&#9;&#9;"
+               BuildableName = "TempCalculator.app"
+               BlueprintName = "TempCalculator"
                ReferencedContainer = "container:TempCalculator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4E40AFB524F4C8C30035826A"
-            BuildableName = "&#9;&#9;&#9;&#9;&#9;&#9;.app"
-            BlueprintName = "&#9;&#9;&#9;&#9;&#9;&#9;"
+            BuildableName = "TempCalculator.app"
+            BlueprintName = "TempCalculator"
             ReferencedContainer = "container:TempCalculator.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -56,8 +56,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4E40AFB524F4C8C30035826A"
-            BuildableName = "&#9;&#9;&#9;&#9;&#9;&#9;.app"
-            BlueprintName = "&#9;&#9;&#9;&#9;&#9;&#9;"
+            BuildableName = "TempCalculator.app"
+            BlueprintName = "TempCalculator"
             ReferencedContainer = "container:TempCalculator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -75,8 +75,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4E40AFB524F4C8C30035826A"
-            BuildableName = "&#9;&#9;&#9;&#9;&#9;&#9;.app"
-            BlueprintName = "&#9;&#9;&#9;&#9;&#9;&#9;"
+            BuildableName = "TempCalculator.app"
+            BlueprintName = "TempCalculator"
             ReferencedContainer = "container:TempCalculator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
