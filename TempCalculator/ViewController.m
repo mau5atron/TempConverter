@@ -24,19 +24,37 @@
 	[self.errorDisplay setAlpha:0.0];
 	self.errorDisplay.frame = CGRectMake(20, -50, 374, 50); // set initial y position out of sight
 	self.errorDisplayLabel.frame = CGRectMake(15, 0, 374, 50); // set left padding on label
+	[self.conversionTextFieldOutlet setPlaceholder:@"Enter F temperature to convert to C"];
+	self.temperatureLabelOutlet.text = @"Celsius";
 }
 
 
 - (IBAction)segControlTempConversion:(id)sender {
-//	self.temperatureLabelOutlet.text = self.conversionTextFieldOutlet.text;
-//	switch ( self.convertSegControlOutlet.selectedSegmentIndex ) {
-//		case 0:
-//
-//			break;
-//
-//		default:
-//			break;
-//	}
+	//self.temperatureLabelOutlet.text = self.conversionTextFieldOutlet.text;
+	switch ( self.convertSegControlOutlet.selectedSegmentIndex ) {
+		case 0:
+			[self.conversionTextFieldOutlet setPlaceholder:@"Enter F temperature to convert to C"];
+			NSLog(@"Called some temp in C");
+			self.temperatureLabelOutlet.text = @"Celsius";
+			if ( [self checkConversionTextFieldIsNumeric:self.conversionTextFieldOutlet.text] ){
+				celsius = [self.conversionTextFieldOutlet.text doubleValue];
+				celsius = [self convertToC:celsius];
+				self.temperatureLabelOutlet.text = [NSString stringWithFormat:@"%.2f Celsius", celsius];
+			}
+			break;
+		case 1:
+			[self.conversionTextFieldOutlet setPlaceholder:@"Enter C temperature to convert to F"];
+			NSLog(@"Called some temp in F");
+			self.temperatureLabelOutlet.text = @"Fahrenheit";
+			if ( [self checkConversionTextFieldIsNumeric:self.conversionTextFieldOutlet.text] ){
+				fahrenheit = [self.conversionTextFieldOutlet.text doubleValue];
+				fahrenheit = [self convertToF:fahrenheit];
+				self.temperatureLabelOutlet.text = [NSString stringWithFormat:@"%.2f Fahrenheit", fahrenheit];
+			}
+			break;
+		default:
+			break;
+	}
 }
 
 - (BOOL)checkConversionTextFieldIsNumeric:(NSString *)textFieldText {
@@ -58,9 +76,12 @@
 	return validNumericInput;
 }
 
+// send when user presses done on keyboard
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
 	if ( [self checkConversionTextFieldIsNumeric:self.conversionTextFieldOutlet.text] ){
-		
+		// actually call the conversion to take place
+		// pass this into the conversion function
+		[self segControlTempConversion:self];
 	}
 	[textField resignFirstResponder];
 	return TRUE;
@@ -88,8 +109,8 @@
 		[self.errorDisplay setAlpha:1.0];
 		self.errorDisplay.frame = CGRectMake(20, 50, 374, 50);
 	} completion:^(BOOL finished){
-		// NSLog(@"Displaying error message");
-		errorTimerWindow = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(fadeDisplayErrorWindow) userInfo:NULL repeats:FALSE];
+		// fix implicit self
+		self->errorTimerWindow = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(fadeDisplayErrorWindow) userInfo:NULL repeats:FALSE];
 	}];
 }
 
@@ -99,8 +120,22 @@
 		self.errorDisplay.frame = CGRectMake(20, -50, 374, 50);
 	} completion:^(BOOL finished){
 		self.errorDisplayLabel.text = @"";
-		// NSLog(@"No longer displaying error message.");
 	}];
 }
 
+
+// conversions
+- (double)convertToC:(double)dToConvert { // convert to celsius
+	// subtract 32
+	// multiply by 5
+	// divide by 9
+	return ( (dToConvert - 32) * 5 ) / 9;
+}
+
+- (double)convertToF:(double)dToConvert { // convert to fahrenheit
+	// divide by 5
+	// multiply by 9
+	// add 32
+	return ( (dToConvert / 5) * 9 ) + 32;
+}
 @end

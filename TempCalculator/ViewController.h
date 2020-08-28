@@ -36,5 +36,7 @@
 - (void)displayErrorWindow:(NSTimer *)errorTimer;
 - (void)fadeDisplayErrorWindow;
 
+- (double)convertToC:(double)dToConvert; // celsius
+- (double)convertToF:(double)dToConvert; // fahrenheit
 @end
 
