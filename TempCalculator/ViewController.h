@@ -38,5 +38,9 @@
 
 - (double)convertToC:(double)dToConvert; // celsius
 - (double)convertToF:(double)dToConvert; // fahrenheit
+
+- (void)switchImageC:(double)tempInC;
+- (void)switchImageF:(double)tempInF;
+- (void)setTempImage:(NSString *)tempImgString;
 @end
 

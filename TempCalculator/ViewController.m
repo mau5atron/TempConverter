@@ -28,7 +28,6 @@
 	self.temperatureLabelOutlet.text = @"Celsius";
 }
 
-
 - (IBAction)segControlTempConversion:(id)sender {
 	//self.temperatureLabelOutlet.text = self.conversionTextFieldOutlet.text;
 	switch ( self.convertSegControlOutlet.selectedSegmentIndex ) {
@@ -37,8 +36,12 @@
 			NSLog(@"Called some temp in C");
 			self.temperatureLabelOutlet.text = @"Celsius";
 			if ( [self checkConversionTextFieldIsNumeric:self.conversionTextFieldOutlet.text] ){
+				
+				// add logic here to change the image on the imageview depending on the temperature
+				
 				celsius = [self.conversionTextFieldOutlet.text doubleValue];
 				celsius = [self convertToC:celsius];
+				[self switchImageC:celsius];
 				self.temperatureLabelOutlet.text = [NSString stringWithFormat:@"%.2f Celsius", celsius];
 			}
 			break;
@@ -49,6 +52,7 @@
 			if ( [self checkConversionTextFieldIsNumeric:self.conversionTextFieldOutlet.text] ){
 				fahrenheit = [self.conversionTextFieldOutlet.text doubleValue];
 				fahrenheit = [self convertToF:fahrenheit];
+				[self switchImageF:fahrenheit];
 				self.temperatureLabelOutlet.text = [NSString stringWithFormat:@"%.2f Fahrenheit", fahrenheit];
 			}
 			break;
@@ -119,7 +123,14 @@
 		[self.errorDisplay setAlpha:0.0];
 		self.errorDisplay.frame = CGRectMake(20, -50, 374, 50);
 	} completion:^(BOOL finished){
-		self.errorDisplayLabel.text = @"";
+		/*
+		 do nothing here
+		 
+		 commented this, else, when window faded in
+		 it would display a blank at depending on how
+		 user pressed the segments
+	  */
+		// self.errorDisplayLabel.text = @"";
 	}];
 }
 
@@ -137,5 +148,53 @@
 	// multiply by 9
 	// add 32
 	return ( (dToConvert / 5) * 9 ) + 32;
+}
+
+- (void)switchImageC:(double)tempInC {
+	if ( celsius > 85 ){
+		[self setTempImage:@"Temp9"];
+	} else if ( celsius > 75 ){
+		[self setTempImage:@"Temp8"];
+	} else if ( celsius > 65 ){
+		[self setTempImage:@"Temp7"];
+	} else if ( celsius > 55 ){
+		[self setTempImage:@"Temp6"];
+	} else if ( celsius > 45 ){
+		[self setTempImage:@"Temp5"];
+	} else if ( celsius > 35 ){
+		[self setTempImage:@"Temp4"];
+	} else if ( celsius > 25 ){
+		[self setTempImage:@"Temp3"];
+	} else if ( celsius > 15 ){
+		[self setTempImage:@"Temp2"];
+	} else if ( celsius < 15 ){
+		[self setTempImage:@"Temp1"];
+	}
+}
+
+- (void)switchImageF:(double)tempInF {
+	if ( fahrenheit > 180.00 ){
+		[self setTempImage:@"Temp9"];
+	} else if ( fahrenheit > 160.00 ){
+		[self setTempImage:@"Temp8"];
+	} else if ( fahrenheit > 140.00 ){
+		[self setTempImage:@"Temp7"];
+	} else if ( fahrenheit > 120.00 ){
+		[self setTempImage:@"Temp6"];
+	} else if ( fahrenheit > 100.00 ){
+		[self setTempImage:@"Temp5"];
+	} else if ( fahrenheit > 80.00 ){
+		[self setTempImage:@"Temp4"];
+	} else if ( fahrenheit > 60.00 ){
+		[self setTempImage:@"Temp3"];
+	} else if ( fahrenheit > 40.00 ){
+		[self setTempImage:@"Temp2"];
+	} else if ( fahrenheit < 40.00 ){
+		[self setTempImage:@"Temp1"];
+	}
+}
+
+- (void)setTempImage:(NSString *)tempImgString {
+	self.assetTemperatureOutlet.image = [UIImage imageNamed:tempImgString];
 }
 @end
